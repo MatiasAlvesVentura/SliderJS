@@ -1,0 +1,76 @@
+@use 'colors';
+body {
+    background: linear-gradient(0deg, rgba(148, 57, 104, 0.9976365546218487) 1%, rgba(107, 52, 176, 1) 43%, rgba(100, 65, 196, 1) 84%);
+    height: 100vh;
+    .gral {
+        padding-top: 100px;
+        .box-container {
+            max-width: 800px;
+            max-height: 600px;
+            overflow: hidden;
+            background-color: colors.$color-main;
+            margin: auto;
+            position: relative;
+            box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+            .previous {
+                position: absolute;
+                left: 0;
+                margin-left: 10px;
+                top: 45%;
+                height: 46px;
+                width: 46px;
+                text-decoration: none;
+                font-size: 50px;
+                border-radius: 50%;
+                color: colors.$color-main;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 100;
+            }
+            .previous,
+            .next {
+                opacity: 0;
+            }
+            .previous:hover,
+            .next:hover {
+                opacity: 0.8;
+            }
+            .next {
+                position: absolute;
+                right: 0;
+                margin-right: 10px;
+                top: 45%;
+                height: 46px;
+                width: 46px;
+                text-decoration: none;
+                font-size: 50px;
+                border-radius: 50%;
+                text-align: center;
+                color: colors.$color-main;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 100;
+            }
+            ul {
+                &.box-slider {
+                    display: flex;
+                    width: 800px;
+                    height: 600px;
+                    li {
+                        display: flex;
+                        align-content: center;
+                        align-items: center;
+                        justify-content: center;
+                        min-width: 800px;
+                        min-height: 600px;
+                        background: linear-gradient(0deg, rgba(166, 126, 215, 1) 43%, rgba(157, 128, 238, 1) 84%);
+                        font-size: 45px;
+                        list-style: none;
+                    }
+                }
+            }
+        }
+    }
+}
